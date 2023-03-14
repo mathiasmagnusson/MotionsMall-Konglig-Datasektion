@@ -8,6 +8,11 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{parskip}
+\usepackage[colorlinks=true,citecolor=black,linkcolor=black]{hyperref}
+\usepackage[style=ieee]{biblatex}
+
+\addbibresource{bib.bib}
 
 \definecolor{cerise}{RGB}{232, 61, 132}
 \definecolor{gray3}{RGB}{66, 66, 66}
@@ -21,20 +26,22 @@
 \pagestyle{fancy}
 \thispagestyle{fancy}
 \fancyhead[L]{\small{
-    Motion till -SM % Skriv SM-namn
+    Motion till Revisions-SM
 \\\textcolor{gray3}{
-    dd-mm-yyyy % Datum för SM
+    2023-03-28
 }}}
 \fancyhead[C]{\includegraphics[width=1.25cm,height=1.25cm]{./skold-color.pdf}}
 \fancyhead[R]{\small{\textcolor{gray3}{
-    <Dokumentansvarig>\\ % Skriv ditt namn här
-    sida \thepage{} av \pageref{LastPage}}}}
+    Mathias Magnusson\\ % Skriv ditt namn här
+    sida \thepage{} av \pageref*{LastPage}}}}
 \fancyfoot[C]{\small{\textcolor{gray3}{Konglig Datasektionen, THS 100 44, datasektionen.se}}}
 \renewcommand{\headrulewidth}{0pt}
 
 \title{\textcolor{cerise}{\textbf{
     Motion angående\\
-    % Din titel
+    dJulkalendern någonting någonting nämnd\\
+    eller\\
+    hur vi ser till att dJulkalendern 2023 inte blir av
 }}}
 
 \date{}
@@ -42,13 +49,35 @@
 \begin{document}
 
 \maketitle
-\thispagestyle{fancy} % Smutsigt fulhack för att få header på första sidan
+\thispagestyle{fancy} % Härligt finhack för att få header på första sidan
 
 \section*{\textcolor{cerise}{
     Bakgrund
 }}
 
-% Kort text som beskriver varför motionen läggs
+dJuvliga hälsningar Datasektionen!
+
+dJulkalendern hölls för första gången 2014 \cite{lol} då Ludwig Janiuk var \textit{eldsjälen i
+kärnan} och jobbet skedde \textit{måttligt planerat och måttligt strukturerat}
+\cite{weigelt_20}.
+
+Efter Budget-SM år 2020 blev dJulkalendern tack vare Christian ett faktiskt projekt under Konglig
+Datasektionen och så har det nu varit i tre år. Det har fungerat bra och så skulle vi för alla del
+kunna fortsätta ha det. Däremot vore det mer passande att dJulkalendern istället skulle vara en
+nämnd. Bland annat skulle det glädja Dr. Ek, men framförallt skulle det underlätta för mer
+kontinuerligt arbete på kalendern under årets gång.
+
+Dessutom har dHöstkalendern anordnats under mottagningen av projektgruppen för dJulkalendern men,
+den har skett (och förberetts) innan projektet ens haft någon verksamhetsplan eller budget
+\cite{kaffe_dm_22}.
+
+\vspace{1cm}
+
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{./djulutan23.jpg}
+\end{center}
+
+\clearpage
 
 \section*{\textcolor{cerise}{
     Förslag till beslut
@@ -59,20 +88,53 @@
 \newcounter{attnummer}
 \setcounter{attnummer}{1}
 \begin{list}{\bf att$_{\theattnummer}$\stepcounter{attnummer}}{}
-\item
+    \item i reglementet lägga till ``§3.22 dJulkalendern''
+
+    \item i reglementet lägga till ``§3.22.1 Ändamål'' med följande innehåll:
+        \begin{quote}
+            dJulkalenderns ändamål är att främja intresse för etisk hackning, problem-lösning och
+            CTF-tävlingar inom Konglig Datasektionen.
+        \end{quote}
+
+    \item i reglementet lägga till ``§3.22.2 Organisation'' med följande innehåll:
+        \begin{quote}
+            dJulkalendern leds av Tomtemor/-far.
+
+            Övriga medlemmar utses av Tomtemor/-far.
+        \end{quote}
+
+    \item i reglementet lägga till ``§3.22.3 Verksamhet'' med följande innehåll:
+        \begin{quote}
+            dJulkalendern ska varje december anordna en CTF-liknande tävling på den världsvida
+            webben för Konglig Datasektionsns medlemmar samt övriga intresserade.
+
+            dJulkalendern ska även anordna dHöstkalendern, en mindre variant av dJulkalendern för
+            nyantagna medlemmar till Konglig Datasektionen under mottagningen.
+        \end{quote}
+
+    \item i reglementet lägga till ``§5.2.22 Tomtemor/-far'' med följande innehåll:
+        \begin{quote}
+            Är ordförande för dJulkalendern.
+
+            Väljs på Val-SM. Har läsår som mandatperiod.
+        \end{quote}
+
+    \item för dJulkalendern anta den bifogade \hyperref[fig:budget]{budgeten}.
+
+    \item öppna upp för fyllnadsval till Tomtemor/-far.
 \end{list}
 
-\vspace{2cm}
-\noindent
-% Name, eventuell titel eller annat skoj
+\vspace{1cm}
 
-% Avkommentera följande om du vill visa en bild
-% \begin{center}
-% \includegraphics[scale=0.5]{
-    % Eventuell fin bild du vill visa.
-%     ./logo.png
-% }
-% \end{center}
+Mathias Magnusson, Tomtefar \\
+dAnkan, dAnkan
 
+\printbibliography
+
+
+\begin{figure}
+    \includegraphics[width=1\textwidth]{./budget.pdf}
+    \label{fig:budget}
+\end{figure}
 
 \end{document}
